@@ -2,7 +2,7 @@
 
 `native/` 中的 115 张 PNG 来自本机微信 4.1.15.13 的原始 Qt 资源，未修改图像，包括 105 张经典表情和 10 张新版表情。`native-aliases.json` 的新版名称和文件名逐项来自同版本 `newemoji-config.xml`；经典名称来自 DLL 的 `zh_CN` 指针表，并由实际机器码证实同一索引 `i` 对应 `expression_{i+1}.png`，不是按外观或常见列表顺序猜测。例如“色”对应 `expression_3.png`，“调皮”对应 `expression_13.png`。“笑脸”（Happy.png）与“微笑”（expression_1.png）是不同名称。原生图片属于微信素材，不适用下面的 Twemoji 许可；本轮用于用户的个人桌宠原型。
 
-提取来源 DLL SHA256：`10f8e995453e2da46d4f2b5080cd6da1f13cc5147746adc119ceae38cb039de5`。配置、偏移、文件哈希和解码检查记录见源码项目 `tests/native-emoji-extraction/evidence.json`；经典表情的函数、指令字节和 105 项名称映射见同目录 `classic-mapping-evidence.json`，`extract-classic.py` 可在相同源文件上复核。图片保留原始 24×24、48×48 或 64×64 尺寸。运行时不读取微信安装目录。
+提取来源 DLL SHA256：`10f8e995453e2da46d4f2b5080cd6da1f13cc5147746adc119ceae38cb039de5`。图片保留原始 24×24、48×48 或 64×64 尺寸。运行时不读取微信安装目录。
 
 `native-names.json` 是 147 个带方括号的原始名称字符串数组，例如 `[色]`、`[调皮]`，用于识别本版本的内置表情名称。来源为 105 个编译名称和 `newemoji-config.xml` 的 45 项，去除“抱拳”“再见”“礼物”三个重名。这是已定义的名称集合，不代表它们全部显示在当前表情面板中；实际写入仍须检查微信草稿。“抱拳”“再见”“礼物”的预览保留已证实的经典图片，没有推断新版覆盖顺序。
 

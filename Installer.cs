@@ -66,7 +66,7 @@ public static class PetInstaller {
                 shortcut.GetType().InvokeMember("IconLocation",BindingFlags.SetProperty,null,shortcut,new object[]{Path.Combine(root,"assets","wechat-pet","brand","wechat-pet.ico")});
                 shortcut.GetType().InvokeMember("Save",BindingFlags.InvokeMethod,null,shortcut,null);
                 using(var key=Registry.CurrentUser.CreateSubKey(RegistryPath)) {
-                    key.SetValue("DisplayName","微信 AI 桌宠（个人原型）");key.SetValue("DisplayVersion","0.7.0");
+                    key.SetValue("DisplayName","微信 AI 桌宠（个人原型）");key.SetValue("DisplayVersion","0.7.1");
                     key.SetValue("InstallLocation",root);key.SetValue("UninstallString","\""+Path.Combine(root,"Uninstall.exe")+"\" --uninstall");
                     key.SetValue("DisplayIcon",Path.Combine(root,"WeChatPet.exe"));
                     key.SetValue("NoModify",1);key.SetValue("NoRepair",1);

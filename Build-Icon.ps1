@@ -1,4 +1,4 @@
-# Package the approved generated artwork into Windows icon resolutions.
+﻿# Package the approved generated artwork into Windows icon resolutions.
 $ErrorActionPreference = 'Stop'
 Add-Type -AssemblyName System.Drawing
 $brand = Join-Path $PSScriptRoot 'assets/wechat-pet/brand'
@@ -16,7 +16,6 @@ try {
    $graphics.DrawImage($source,0,0,$size,$size)
    $bitmap.Save($stream,[Drawing.Imaging.ImageFormat]::Png)
    $frames += @{ Size=$size; Bytes=$stream.ToArray() }
-   if ($size -eq 256) { $bitmap.Save((Join-Path $brand 'logo-preview.png'),[Drawing.Imaging.ImageFormat]::Png) }
   } finally { $graphics.Dispose(); $bitmap.Dispose(); $stream.Dispose() }
  }
 } finally { $source.Dispose() }

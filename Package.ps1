@@ -1,4 +1,4 @@
-param([switch]$SkipBuild, [string]$NodePath)
+﻿param([switch]$SkipBuild, [string]$NodePath)
 $ErrorActionPreference='Stop'
 if (-not $SkipBuild) { & (Join-Path $PSScriptRoot 'Build.ps1') -NodePath $NodePath }
 $release=Join-Path $PSScriptRoot 'release'
@@ -12,12 +12,12 @@ foreach($item in @(@('WeChatPet.exe','appSHA256'),@('WeChatObserver.exe','observ
 $token=[Guid]::NewGuid().ToString('N')
 $zip=Join-Path $out ('payload-'+$token+'.zip')
 $temporarySetup=Join-Path $out ('setup-'+$token+'.exe')
-$setup=Join-Path $out 'WeChatPet-Setup-0.7.0.exe'
+$setup=Join-Path $out 'WeChatPet-Setup-0.7.1.exe'
 try {
  $archive=[IO.Compression.ZipFile]::Open($zip,[IO.Compression.ZipArchiveMode]::Create)
  try {
-  $files=@('WeChatPet.exe','WeChatObserver.exe','build-info.json','使用说明.md','runtime/node.exe','runtime/model-worker.mjs') | ForEach-Object {Get-Item -LiteralPath (Join-Path $release $_)}
-  foreach($folder in @('assets','licenses')){$files+=Get-ChildItem -LiteralPath (Join-Path $release $folder) -File -Recurse}
+  $files=@('WeChatPet.exe','WeChatObserver.exe','build-info.json','使用说明.md','LICENSE','runtime/node.exe','runtime/model-worker.mjs') | ForEach-Object {Get-Item -LiteralPath (Join-Path $release $_)}
+  foreach($folder in @('assets','licenses','docs')){$files+=Get-ChildItem -LiteralPath (Join-Path $release $folder) -File -Recurse}
   foreach($file in $files) {
    if(-not $file.FullName.StartsWith($release+[IO.Path]::DirectorySeparatorChar,[StringComparison]::OrdinalIgnoreCase)){throw 'Payload outside release'}
    if(($file.Attributes -band [IO.FileAttributes]::ReparsePoint) -ne 0){throw 'Reparse points are not packaged'}

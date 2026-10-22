@@ -4,13 +4,7 @@
 /bin/
 /data/
 /reports/
-/tests/*.png
-/tests/*.txt
-/tests/results.json
-/tests/*-results.json
-/tests/shuy-*.json
-/tests/*.exe
-/tests/*.dll
+/tests/
 *.dpapi
 *.tmp
 
