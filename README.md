@@ -34,6 +34,14 @@
 
 模型凭证、个人设置与好友记忆保存在当前 Windows 用户的本机目录，凭证和记忆使用系统加密。首次使用需自行连接模型；生成回复时，当前会话的相关内容会发送给你选择的模型服务。
 
+## 联系作者
+
+小红书：**[AI博士嗨嗨](https://xhslink.cn/o/5EYa0xpEAsq)** · 小红书号：`aiboshihaihai`
+
+欢迎交流使用体验与建议。点击上方链接，或用小红书扫描下方二维码找到我。
+
+<a href="https://xhslink.cn/o/5EYa0xpEAsq"><img src="docs/contact/xiaohongshu.jpg" alt="AI博士嗨嗨的小红书二维码，小红书号 aiboshihaihai" width="280" /></a>
+
 ## 许可
 
 代码采用 [MIT License](LICENSE)。第三方运行时、角色与表情素材遵循 [各自许可说明](licenses/THIRD-PARTY.md)，代码许可不授予第三方素材或商标的额外权利。本项目为独立社区项目。
