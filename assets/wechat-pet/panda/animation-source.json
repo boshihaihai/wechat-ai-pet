@@ -1,0 +1,17 @@
+{
+  "name": "团团",
+  "source": "User-created ChatGPT pet; reused with user request for personal WeChat desktop prototype",
+  "file": "tuantuan-sprites.png",
+  "sha256": "5c77c86aba4b4be7ef626c9865f78b52a92b9e112599561610101a5528efdda6",
+  "cellWidth": 192,
+  "cellHeight": 208,
+  "rows": {
+    "Idle": 0,
+    "Thinking": 7,
+    "Ready": 3,
+    "Filled": 4,
+    "Paused": 8,
+    "Error": 5
+  },
+  "rendering": "whole-cell frames; no strip deformation"
+}
