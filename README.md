@@ -6,13 +6,9 @@
 
 ## 实际使用
 
-收到私聊消息后，桌宠展示回复建议。按 **Tab** 即可填入完整内容。
-
-![微信聊天中的桌宠与回复建议](docs/screenshots/chat-reply.jpg)
-
-切换喜欢的宠物形象，调整大小与动画；为不同好友设置回复方式，并管理好友和群聊记忆。
-
-![桌宠外观设置与好友记忆](docs/screenshots/appearance-memory.jpg)
+| 回复建议 · Tab 填入 | 外观设置 · 好友记忆 |
+| :---: | :---: |
+| ![微信聊天中的桌宠与回复建议](docs/screenshots/chat-reply.jpg) | ![桌宠外观设置与好友记忆](docs/screenshots/appearance-memory.jpg) |
 
 ## 功能
 
